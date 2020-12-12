@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+/* basic pages style*/
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 2;
+  background: #ffffff;
+  color: black;
+}
+
+h1 { font-size: 3em;
+    line-height: 2;
+    text-align: center;
+}
+h2 { font-size: 2em;
+    line-height: 2;
+    text-align: center;
+}
+h3 { font-size: 1em;
+    line-height: 2;
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+a:hover {
+  color: blue;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: relative;
+  top: -40px;
+}
+
+.skip a:focus{
+  top: 0px;
+}
+  
+
+.nav {
+  float: right;
+  margin-top: 10px;
+}
+.nav li {
+  display: inline-block;
+  margin-right: 24px;
+  position: relative;
+}
+
+.nav li a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16;
+  font-weight: 500;
+  line-height: 2;
+  position: relative;
+}
+
+.nav li:last-child { margin-right: 0px; }
+
+.nav li a::before {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -2px;
+  background: blue;
+
+  -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+}
+.nav li a.active::before {
+  width: 100%;
+}
+
+
+/* travel */
+
+.container {
+  max-width: 1400px;
+  margin: 40px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.photo {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: inherit;
+  margin: auto;
+  justify-content: center;
+}
+
+.photo div {
+  flex: auto;
+  width: 400px;
+  margin: 8px;
+}
+
+.photo div img {
+  height: auto;
+  width: 100%;
+
+}
+
+
+/* about page */
+.about{
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.about{
+  contain: 1400px;
+}
+
+.paragraph1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.paragraph2 {
+  text-align: center;
+  font-size: 24px;  
+}
+
+
+/* contact page*/
+
+.form-container {
+  max-width: 1000px;
+  margin: 50px auto 0;
+}
+
+.contact-form .form-group { margin-bottom: 30px; }
+.contact-form .form-group:last-child { margin-bottom: 0; }
+
+  input[type="text"],select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  line-height: 50px;
+  font-family: inherit;
+  font-size: 16px;
+  background: whitesmoke;
+ }
+
+  textarea {
+  max-width: 100%;
+	min-height: 160px;
+	line-height: inherit;
+	padding: 20px;
+}
+
+  label {
+	display: grid;
+	position: relative;
+	font-size: 16px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+  input[type=submit] {
+    color: white;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background:blue;
+    position: relative;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  input [type=submit]:hover{
+    background-color: gray;
+  }
+
+.parallax {
+  padding-top: 400px;
+  padding-bottom: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("../images/home4.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.img {
+  vertical-align: middle;
+}
+
+/*Flip card*/
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 400px;
+  perspective: 1000px;
+  margin:auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  }
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  }
+
+.flip-card-front {
+  display: flex;
+  justify-content: center;
+  color: black;
+  background-color:white;
+  background-size: cover;
+}
+
+.flip-card-back {
+  background-color:lightgray;
+  color:black;
+  text-align: center;
+  transform: rotateY(180deg);
+  display: flex;
+}
+
+/*grid*/
+
+.resume {
+  display: grid;
+  width: 500mm;
+  margin: auto;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows   : 1fr 1fr 1fr 1fr;
+  box-shadow           : 0 0 12px rgba(0,0,0,.25);
+  grid-gap             : 5px;
+  grid-template-areas  :
+      "name  connect"
+      "work  education"
+      "work  skills1"
+      "skills3  skills2";
+}
+
+.grid-area {
+    padding: 1em 1em 1em 1em;
+    border : 1px black solid;
+    text-align: center;
+    justify-content: center;    
+}
+
+.name {
+    grid-area: name;
+    background-color: lightblue;
+}
+
+.connect {
+    grid-area: connect;
+    background-color: lightblue;    
+}
+
+.education {
+    grid-area: education;
+    background-color: lightgray;
+}
+
+.work {
+    grid-area: work;
+    background-color: lightgray;    
+}
+
+.skills1 {
+    grid-area: skills1;
+    background-color: lightgray; 
+}
+
+.skills2 {
+    grid-area: skills2;
+    background-color: lightblue;
+}
+
+.skills3 {
+    grid-area: skills3;
+    background-color: lightblue;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+   
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+  .skip a{
+    -webkit-transition: none;
+    transition: none; 
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  
+  .parallax {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) { 
+  .flip-card{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) { 
+  .resume{
+    display: table-row-group;
+  }
+}
+
