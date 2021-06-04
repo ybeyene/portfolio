@@ -212,7 +212,7 @@ a:hover {
   position: relative;
   width: 100%;
   background-image: url("../images/home4.jpg")    ;
-  background-attachment: fixed;
+  background-attachment: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -220,7 +220,6 @@ a:hover {
 
 .img {  
   vertical-align: middle;
-  position: relative;
 }
 
 /*Flip card*/
