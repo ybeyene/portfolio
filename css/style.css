@@ -203,21 +203,24 @@ a:hover {
     background-color: gray;
   }
 
+  /*Parallax*/
+
 .parallax {
   padding-top: 300px;
   padding-bottom: 300px;
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url("../images/home4.jpg");
+  background-image: url("../images/home4.jpg")    ;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
-.img {
+.img {  
   vertical-align: middle;
+  position: relative;
 }
 
 /*Flip card*/
